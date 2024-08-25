@@ -137,7 +137,6 @@ This will open pico where you will be able to edit
 2. Use the following format
 
 ```
-{
 #!/bin/bash
 
 #SBATCH --account=mel_333
@@ -155,7 +154,6 @@ module load python/3.9.12
 cd /project/mel_333/<carc-directory>         # Specifies path for where your python file is stored      
 
 python <python-file>.py
-}
 ```
 
 Note: You can use this exact format (i.e you shouldn't have to change much above). You just have to change the <env-name> to be the same path and name as your environment that you setup in step one. You will also have to change the cd command in to be the right file path to your python file, which should be called in the last line
