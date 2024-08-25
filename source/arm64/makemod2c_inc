@@ -1,0 +1,57 @@
+
+./double_synapse.c: ../double_synapse.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd ".."; MODLUNIT=$(NRNUNITS) $(NOCMODL) double_synapse.mod -o "/Users/christopherjewell/Desktop/USC/Research/J4 Morphology/hoc/arm64")
+
+./double_synapse.o: ./double_synapse.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I".." $(INCLUDES) -fPIC -c $< -o $@
+
+./gabaa.c: ../gabaa.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd ".."; MODLUNIT=$(NRNUNITS) $(NOCMODL) gabaa.mod -o "/Users/christopherjewell/Desktop/USC/Research/J4 Morphology/hoc/arm64")
+
+./gabaa.o: ./gabaa.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I".." $(INCLUDES) -fPIC -c $< -o $@
+
+./hh3k.c: ../hh3k.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd ".."; MODLUNIT=$(NRNUNITS) $(NOCMODL) hh3k.mod -o "/Users/christopherjewell/Desktop/USC/Research/J4 Morphology/hoc/arm64")
+
+./hh3k.o: ./hh3k.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I".." $(INCLUDES) -fPIC -c $< -o $@
+
+./hh3na.c: ../hh3na.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd ".."; MODLUNIT=$(NRNUNITS) $(NOCMODL) hh3na.mod -o "/Users/christopherjewell/Desktop/USC/Research/J4 Morphology/hoc/arm64")
+
+./hh3na.o: ./hh3na.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I".." $(INCLUDES) -fPIC -c $< -o $@
+
+./nmdaSyn.c: ../nmdaSyn.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd ".."; MODLUNIT=$(NRNUNITS) $(NOCMODL) nmdaSyn.mod -o "/Users/christopherjewell/Desktop/USC/Research/J4 Morphology/hoc/arm64")
+
+./nmdaSyn.o: ./nmdaSyn.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I".." $(INCLUDES) -fPIC -c $< -o $@
+
+./nmda_dsyn.c: ../nmda_dsyn.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd ".."; MODLUNIT=$(NRNUNITS) $(NOCMODL) nmda_dsyn.mod -o "/Users/christopherjewell/Desktop/USC/Research/J4 Morphology/hoc/arm64")
+
+./nmda_dsyn.o: ./nmda_dsyn.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I".." $(INCLUDES) -fPIC -c $< -o $@
+
+./syn_placeholder.c: ../syn_placeholder.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd ".."; MODLUNIT=$(NRNUNITS) $(NOCMODL) syn_placeholder.mod -o "/Users/christopherjewell/Desktop/USC/Research/J4 Morphology/hoc/arm64")
+
+./syn_placeholder.o: ./syn_placeholder.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I".." $(INCLUDES) -fPIC -c $< -o $@
+
